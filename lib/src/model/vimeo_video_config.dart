@@ -52,7 +52,7 @@ class VimeoProgressive {
         profile: json["profile"],
         width: json["width"],
         mime: json["mime"],
-        fps: int.parse(json["fps"]),
+        fps: json["fps"].toInt(),
         url: json["url"],
         cdn: json["cdn"],
         quality: json["quality"],

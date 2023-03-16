@@ -3,8 +3,7 @@ class VimeoVideoConfig {
     this.request,
   });
 
-  factory VimeoVideoConfig.fromJson(Map<String, dynamic> json) =>
-      VimeoVideoConfig(
+  factory VimeoVideoConfig.fromJson(Map<String, dynamic> json) => VimeoVideoConfig(
         request: VimeoRequest.fromJson(json["request"]),
       );
 
@@ -29,8 +28,7 @@ class VimeoFiles {
   });
 
   factory VimeoFiles.fromJson(Map<String, dynamic> json) => VimeoFiles(
-        progressive: List<VimeoProgressive>.from(
-            json["progressive"].map((x) => VimeoProgressive.fromJson(x))),
+        progressive: List<VimeoProgressive>.from(json["progressive"].map((x) => VimeoProgressive.fromJson(x))),
       );
 
   List<VimeoProgressive?>? progressive;
@@ -50,18 +48,17 @@ class VimeoProgressive {
     this.height,
   });
 
-  factory VimeoProgressive.fromJson(Map<String, dynamic> json) =>
-      VimeoProgressive(
+  factory VimeoProgressive.fromJson(Map<String, dynamic> json) => VimeoProgressive(
         profile: json["profile"],
-        width: json["width"],
+        width: int.parse(json["width"]),
         mime: json["mime"],
-        fps: json["fps"],
+        fps: int.parse(json["fps"]),
         url: json["url"],
         cdn: json["cdn"],
         quality: json["quality"],
         id: json["id"],
         origin: json["origin"],
-        height: json["height"],
+        height: int.parse(json["height"]),
       );
 
   dynamic profile;

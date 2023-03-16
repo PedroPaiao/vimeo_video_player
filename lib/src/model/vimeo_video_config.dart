@@ -50,7 +50,7 @@ class VimeoProgressive {
 
   factory VimeoProgressive.fromJson(Map<String, dynamic> json) => VimeoProgressive(
         profile: json["profile"],
-        width: int.parse(json["width"]),
+        width: json["width"],
         mime: json["mime"],
         fps: int.parse(json["fps"]),
         url: json["url"],
@@ -58,7 +58,7 @@ class VimeoProgressive {
         quality: json["quality"],
         id: json["id"],
         origin: json["origin"],
-        height: int.parse(json["height"]),
+        height: json["height"],
       );
 
   dynamic profile;

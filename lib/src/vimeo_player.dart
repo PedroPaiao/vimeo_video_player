@@ -126,7 +126,6 @@ class _VimeoVideoPlayerState extends State<VimeoVideoPlayer> {
           } else if (videoData.duration == videoData.position) {
             if (onFinishCallback != null) {
               onFinishCallback.call();
-              dispose();
             }
           }
         }
